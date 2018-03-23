@@ -32,6 +32,7 @@ class Login extends React.Component {
 			alert('Credenciais inválidas.');
 		}else{
 			this.props.history.push('./Home');
+			this.serverRequest = $.get("http://localhost:3000/react-lorena/public/teste.html");
 	
 			
 			
