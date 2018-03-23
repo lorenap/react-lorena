@@ -91,8 +91,8 @@ var RecipeAdd = createReactClass({
       $("#title").val(globalTitle);
       $("#ingredients").val(globalIngredients);
       if (globalTitle !== "") {
-        $("#modalTitle").text("Edit Recipe");
-        $("#addButton").text("Edit Recipe");
+        $("#modalTitle").text("Editar");
+        $("#addButton").text("Editar");
       }
     }
     else requestAnimationFrame(this.open);
@@ -113,7 +113,7 @@ var RecipeAdd = createReactClass({
 	
     if (!exists) {
       if (title.length < 1) title = "Sem título";
-      recipes.push({title: title, ingredients: document.getElementById("ingredients").value.split(",")});
+		recipes.push({title: title, ingredients: document.getElementById("ingredients").value.split(",")});
     }
 	
     update();
@@ -141,7 +141,7 @@ var RecipeAdd = createReactClass({
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.add} bsStyle="primary" id="addButton">Adicionar</Button>
-            <Button onClick={this.close}>Close</Button>
+            <Button onClick={this.close}>Fechar</Button>
           </Modal.Footer>
         </Modal>
       </div>
